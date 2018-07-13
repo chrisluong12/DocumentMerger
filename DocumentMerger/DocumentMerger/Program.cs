@@ -10,8 +10,9 @@ namespace DocumentMerger
         {
             String file1;
             String file2;
+            String name1;
+            String name2;
             String mergeFile;
-            String contents = "";
             int answer;
 
             Console.WriteLine("Document Merger \n");
@@ -20,7 +21,8 @@ namespace DocumentMerger
             {
                 
                 Console.WriteLine("Please enter the name for the first text file:");
-                file1 = Console.ReadLine();
+                name1 = Console.ReadLine();
+                file1 = name1 + ".txt";
 
                 while (File.Exists(file1) == false)
                 {
@@ -30,7 +32,8 @@ namespace DocumentMerger
                 }
 
                 Console.WriteLine("Please enter the name for the second text file:");
-                file2 = Console.ReadLine();
+                name2 = Console.ReadLine();
+                file2 = name2 + ".txt";
 
                 while (File.Exists(file2) == false)
                 {
@@ -39,7 +42,7 @@ namespace DocumentMerger
                     file2 = Console.ReadLine();
                 }
 
-                mergeFile = file1 + file2 + ".txt";
+                mergeFile = name1 + name2 + ".txt";
 
                 //   Console.WriteLine(mergeFile);
 
@@ -47,51 +50,40 @@ namespace DocumentMerger
 
                 String line = "";
                 String line2 = "";
+                String result = "";
+                int count = 0;
+                StreamReader sr1 = new StreamReader(file1);
+                StreamReader sr2 = new StreamReader(file2);
+                StreamWriter sw = new StreamWriter(mergeFile);
+          
 
                 try
                 {
-                    //Pass the file path and file name to the StreamReader constructor
-
-                    StreamWriter sw = new StreamWriter(mergeFile);
-
-                    // sw.Write(content);
-                    sw.Close();
-
-                    //Read the first line of text
-
-                    StreamReader sr1 = new StreamReader(file1);
-                    StreamReader sr2 = new StreamReader(file2);
-                    line = sr1.ReadLine();
-                    line = sr2.ReadLine();
+    
 
                     //Continue to read until you reach end of file
-                    while (line != null)
+                    while ((line = sr1.ReadLine()) != null)
+                       {
+                        //write the lie to console window
+                        //Console.WriteLine(content);
+                        //Read the next line
+                           count += line.Length;
+                        result += line;
+                       }
+
+                    while ((line2 = sr2.ReadLine()) != null)
                     {
                         //write the lie to console window
                         //Console.WriteLine(content);
                         //Read the next line
-                        sw.WriteLine(line);
-                        contents += line;
-
+                        count += line2.Length;
+                        result += line2;
                     }
+                    sw.WriteLine(result);
 
-                    while (line2 != null)
-                    {
-                        //write the lie to console window
-                        //Console.WriteLine(content);
-                        //Read the next line
-                        sw.WriteLine(line2);
-                        contents += line2;
-                        // count++; //this will count the line
-                    }
+                    Console.WriteLine(mergeFile + " was successfully saved. The document contains " + count + " characters." + mergeFile + " and " + count + " are placeholders for the filename of the document and the number of characters it contains");
 
-                    // Console.WriteLine(file + " was successfully saved. The document contains " + count + " characters." + file + " and " + count + " are placeholders for the filename of the document and the number of characters it contains");
-
-                    //close the file
-                    sr1.Close();
-                    sr2.Close();
-                    sw.Close();
-                    // Console.ReadLine();
+                 
                 }
                 catch (Exception e)
                 {
@@ -100,9 +92,14 @@ namespace DocumentMerger
                 finally
                 {
                     Console.WriteLine("Executing finally block.");
+
+                    sr1.Close();
+                    sr2.Close();
+                    sw.Close();
+                     
                 }
 
-                Console.WriteLine("Would you like to merge two more files? (Enter 1  to merge two more files. Else, any button to exit.");
+                Console.WriteLine("Would you like to merge two more files? (Enter 1  to merge two more files. Else, enter any number to exit.");
                 answer = Convert.ToInt32(Console.ReadLine());
 
                 if (answer != 1)
