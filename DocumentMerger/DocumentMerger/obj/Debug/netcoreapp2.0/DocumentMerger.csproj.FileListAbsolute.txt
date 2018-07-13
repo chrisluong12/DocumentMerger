@@ -1,0 +1,11 @@
+/Users/christopherluong/Desktop/Topics in IT/DocumentMerger/DocumentMerger/obj/Debug/netcoreapp2.0/DocumentMerger.csprojResolveAssemblyReference.cache
+/Users/christopherluong/Desktop/Topics in IT/DocumentMerger/DocumentMerger/obj/Debug/netcoreapp2.0/DocumentMerger.csproj.CoreCompileInputs.cache
+/Users/christopherluong/Desktop/Topics in IT/DocumentMerger/DocumentMerger/obj/Debug/netcoreapp2.0/DocumentMerger.AssemblyInfoInputs.cache
+/Users/christopherluong/Desktop/Topics in IT/DocumentMerger/DocumentMerger/obj/Debug/netcoreapp2.0/DocumentMerger.AssemblyInfo.cs
+/Users/christopherluong/Desktop/Topics in IT/DocumentMerger/DocumentMerger/bin/Debug/netcoreapp2.0/DocumentMerger.deps.json
+/Users/christopherluong/Desktop/Topics in IT/DocumentMerger/DocumentMerger/bin/Debug/netcoreapp2.0/DocumentMerger.runtimeconfig.json
+/Users/christopherluong/Desktop/Topics in IT/DocumentMerger/DocumentMerger/bin/Debug/netcoreapp2.0/DocumentMerger.runtimeconfig.dev.json
+/Users/christopherluong/Desktop/Topics in IT/DocumentMerger/DocumentMerger/bin/Debug/netcoreapp2.0/DocumentMerger.dll
+/Users/christopherluong/Desktop/Topics in IT/DocumentMerger/DocumentMerger/bin/Debug/netcoreapp2.0/DocumentMerger.pdb
+/Users/christopherluong/Desktop/Topics in IT/DocumentMerger/DocumentMerger/obj/Debug/netcoreapp2.0/DocumentMerger.dll
+/Users/christopherluong/Desktop/Topics in IT/DocumentMerger/DocumentMerger/obj/Debug/netcoreapp2.0/DocumentMerger.pdb
